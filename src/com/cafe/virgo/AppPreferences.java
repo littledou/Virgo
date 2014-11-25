@@ -7,16 +7,14 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
 /**
- * SharePreferences
+ * Share Preferences
  */
 public class AppPreferences {
 
-	
-	
 	public String isGuide;
 
 	public AppPreferences(Context ctx) {
-		readLocalProperties(ctx);
+		readLocalProperties(ctx); 
 	}
 	private static AppPreferences instance;
 	public final static class Constant {
