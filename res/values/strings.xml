@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">Virgo</string>
+    <string name="app_conn_phone_on">当前使用流量数据,使用wifi会更流畅哦！</string>
+    <string name="app_conn_phone_close">当前使用流量数据，已智能关闭流量</string>
+    <string name="app_conn_close">当前无任何网络连接！</string>
+    <string name="app_conn_wifi_on">当前wifi连接，不会消耗流量哦！</string>
+
+</resources>

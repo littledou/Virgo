@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    
+      <!-- common web main背景 -->
+    <color name="transparent">#00000000</color>
+    <!-- 透明 -->
+    <color name="white">#FFFFFF</color>
+    <!-- 白色 -->
+    
+</resources>
