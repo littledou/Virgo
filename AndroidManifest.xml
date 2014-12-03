@@ -19,13 +19,20 @@
             android:name="com.cafe.virgo.activity.StartScreenActivity"
             android:clearTaskOnLaunch="true"
             android:noHistory="true"
-            android:screenOrientation="portrait"
+            android:screenOrientation="landscape"
             android:theme="@style/AppLaucherTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cafe.virgo.activity.MainPageActivity"
+            android:clearTaskOnLaunch="true"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppLaucherTheme" >
         </activity>
 
     </application>

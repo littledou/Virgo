@@ -1,5 +1,6 @@
 package com.cafe.virgo.activity;
 
+import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
@@ -35,6 +36,7 @@ public class StartScreenActivity extends BaseActivity{
 			//				}
 			//			}, 1000);
 		}
+		startActivity(new Intent(this, MainPageActivity.class));
 	}
 	@Override
 	protected void onDestroy() {
