@@ -23,5 +23,7 @@ public class MainPageActivity extends BaseActivity{
 		this.fancyCoverFlow.setScaleDownGravity(1.2f);
 		this.fancyCoverFlow.setActionDistance(FancyCoverFlow.ACTION_DISTANCE_AUTO);
 		setContentView(fancyCoverFlow);
+		
+		
 	}
 }
