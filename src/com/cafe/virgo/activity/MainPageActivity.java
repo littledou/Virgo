@@ -12,7 +12,6 @@ public class MainPageActivity extends BaseActivity{
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
 		fancyCoverFlow = new FancyCoverFlow(this);
 		this.fancyCoverFlow.setAdapter(new FancyCoverFlowSampleAdapter());
 		this.fancyCoverFlow.setUnselectedAlpha(0.4f);
