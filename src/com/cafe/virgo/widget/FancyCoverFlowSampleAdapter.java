@@ -82,7 +82,6 @@ public class FancyCoverFlowSampleAdapter extends FancyCoverFlowAdapter {
 		imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
 		imageView.setLayoutParams(new FancyCoverFlow.LayoutParams(800, 1000));
 		if(!shadeMap.containsKey(i%images.length)){
-			DLogUtils.syso(i);
 			shadeMap.put(i%images.length, BitmapUtils.createReflectedBitmap(viewGroup.getContext(), getItem(i)));
 		}
 		imageView.setImageBitmap(shadeMap.get(i%images.length));

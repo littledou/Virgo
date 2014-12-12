@@ -1,5 +1,11 @@
 package com.cafe.virgo.util;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
@@ -10,6 +16,7 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Shader.TileMode;
+import android.graphics.drawable.Drawable;
 
 /**
  * 图片操作工具类
@@ -147,4 +154,30 @@ public final class BitmapUtils{
 
 		return null;
 	}
+	/** 
+	 * 把一个路径转换成Drawable对象 
+	 *  
+	 * @param url 
+	 *            路径 
+	 * @return Drawable对象 
+	 */  
+	public static Drawable loadImageFromUrl(String path) {
+		InputStream i = null;  
+		try {
+			HttpURLConnection conn = HttpUtils.openHttpConnection(path);  
+			conn.setRequestMethod("GET");  
+			conn.setConnectTimeout(5000);  
+			if (conn.getResponseCode() == 200) {  
+				i = (InputStream)conn.getContent();  
+			} 
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (ProtocolException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		Drawable d = Drawable.createFromStream(i, "src");  
+		return d;  
+	}  
 }

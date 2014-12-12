@@ -1,10 +1,18 @@
 package com.cafe.virgo.util;
 
+import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import com.cafe.virgo.BaseApplication;
 import com.cafe.virgo.config.VirgoConstant;
+import com.cafe.virgo.enity.ItemsGetFromDapei;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.OkUrlFactory;
 import com.squareup.okhttp.Request;
@@ -15,7 +23,7 @@ import com.squareup.okhttp.Response;
  * @author 侯银博 
  * cllanjim@gmail.com
  */
-public class Httputils {
+public class HttpUtils {
 
 	public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
@@ -206,5 +214,27 @@ public class Httputils {
 		}
 		return null;
 	}
+	public static ArrayList<ItemsGetFromDapei> getMineDapeiDetail(String url) {
+		JSONArray dapeiItemArray = null;
+		ArrayList<ItemsGetFromDapei> mItems = new ArrayList<ItemsGetFromDapei>();
+		String result = getHttp(url);
+		try {
+			int resultInt = new JSONObject(result).getJSONObject("status").getInt("ok");
+			if (resultInt == 1) {
+				Type listType = new TypeToken<ArrayList<ItemsGetFromDapei>>(){}.getType();
+				Gson gson = new Gson();
+				cId = new JSONObject(result).getJSONObject("collection").getString("cid");
+				dapeiItemArray = new JSONObject(result).getJSONObject("collection").getJSONArray("items");
+				mItems = gson.fromJson(dapeiItemArray.toString(), listType);
 
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return mItems;
+	}
+	private static String cId;
+	public static String getCId() {
+		return cId;
+	}
 }

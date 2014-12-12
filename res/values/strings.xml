@@ -5,5 +5,8 @@
     <string name="app_conn_phone_close">当前使用流量数据，已智能关闭流量</string>
     <string name="app_conn_close">当前无任何网络连接！</string>
     <string name="app_conn_wifi_on">当前wifi连接，不会消耗流量哦！</string>
+    <string name="item_make">MAKE</string>
+    <string name="item_makefashion">美格时尚</string>
+    <string name="save_share">保存并分享</string>
 
 </resources>

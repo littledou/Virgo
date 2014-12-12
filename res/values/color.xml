@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
-    
-      <!-- common web main背景 -->
-    <color name="transparent">#00000000</color>
+
+    <!-- common web main背景 -->
     <!-- 透明 -->
-    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
     <!-- 白色 -->
-    
+    <color name="white">#FFFFFF</color>
+    <!-- 灰线 -->
+    <color name="gray_line">#c9c9c9</color>
+    <!-- 红字 -->
+    <color name="red_number">#ff5722</color>
+    <color name="text_color">#666666</color>
+ <color name="black">#000000</color>
+    <!-- 黑色 -->
 </resources>

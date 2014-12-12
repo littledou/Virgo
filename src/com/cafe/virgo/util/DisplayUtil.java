@@ -8,10 +8,10 @@ import com.cafe.virgo.enity.ScrnSize;
 
 public class DisplayUtil {
 	public static ScrnSize getScreenWidth(Context context){
-		DisplayMetrics dm = context.getResources().getDisplayMetrics();  
+		DisplayMetrics dm = context.getResources().getDisplayMetrics();
 		return new ScrnSize(dm.widthPixels, dm.heightPixels,dm.density);
 	}
-	
+
 	/**
 	 * dip转px
 	 * @param context

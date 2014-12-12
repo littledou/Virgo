@@ -19,7 +19,7 @@ public class NetworkStatReceiver extends BroadcastReceiver {
 		ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);  
 		wifiState = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState();  
 		mobileState = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState();  
-		if (wifiState != null && mobileState != null  
+		if (wifiState != null && mobileState != null
 				&& State.CONNECTED != wifiState  
 				&& State.CONNECTED == mobileState) {
 			// 手机网络连接成功  
